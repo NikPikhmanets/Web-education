@@ -1,0 +1,138 @@
+body {
+    margin: 0;
+    font-family: 'Roboto-SLab', sans-serif;
+    font-size: 14px;
+    color: black;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+/* Intro */
+.intro {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: url("../images/bg.jpg") center no-repeat;
+    background-size: cover;
+}
+
+.intro-inner {
+    width: 100%;
+    max-width: 581px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.intro-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+    font-size: 48px;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+}
+
+.intro-subtitle {
+    font-family: 'Roboto-SLab', sans-serif;
+    font-weight: normal;
+    font-size: 20px;
+    text-transform: capitalize;
+    display: block;
+    line-height: 1.2;
+    text-align: center;
+    color: white;
+}
+
+/* Button */
+.button {
+    display: inline-block;
+    vertical-align: top;
+    padding: 10px 33px;
+    border: solid 2px white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1.5;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+
+    transition: background .1s linear, color .1s linear;
+}
+
+.button:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Header */
+.header {
+    padding-top: 40px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-logo {
+    margin: 0 230px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 36px;
+    color: white;
+}
+
+/* Nav */
+.nav {
+    width: 540px;
+    margin: 0 230px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.35px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-link {
+    display: inline-block;
+    vertical-align: top;
+    color: white;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
