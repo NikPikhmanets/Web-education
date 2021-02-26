@@ -181,20 +181,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .section-first-icons {
-    alignment: center;
-    background: url('../images/icons.png') 0 0;
-}
-
-.section-first-icons-border {
     border-radius: 50%;
     border: solid 2px #dddddd;
     height: 90px;
     width: 90px;
     display: inline-block;
     margin: 70px 0 29px;
+     vertical-align: center;
+    background: url('../images/icons.png') 0 0;
 }
 
-.section-first-icons-border:hover {
+.section-first-icons:hover {
     background: #c0301c url('../images/icons.png') 0 -110px;
 }
 
@@ -213,9 +210,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .section-third-icons {
-    height: 50px;
-    width: 50px;
-    background: url('../images/icons.png') -230px 0;
+    height: 49px;
+    width: 48px;
+    background: url('../images/icons.png') -229px 0;
 }
 
 .section-third-icons-border {
@@ -228,7 +225,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .section-third-icons-border:hover {
-    background: #c0301c url('../images/icons.png') -230px -110px;
+    height: 49px;
+    width: 48px;
+    background: #c0301c url('../images/icons.png') -229px -110px;
 }
 
 .section-title-column {
