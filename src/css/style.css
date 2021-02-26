@@ -2,7 +2,7 @@ body {
     margin: 0;
     font-family: 'Roboto-SLab', sans-serif;
     font-size: 14px;
-    color: black;
+    color: white;
 }
 
 *,
@@ -58,6 +58,8 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Roboto-SLab', sans-serif;
     font-weight: normal;
     font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 50px;
     text-transform: capitalize;
     display: block;
     line-height: 1.2;
