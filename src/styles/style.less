@@ -1,6 +1,7 @@
 @font-montserrat: 'Montserrat', sans-serif;
 @font-roboto-slab: 'Roboto-SLab', sans-serif;
 @color-grey: #555;
+@color-light-grey: #f8f8f8;
 @color-background-icon: #c0301c;
 @color-border-icon: #ddd;
 
@@ -12,7 +13,6 @@ body {
   }
 
   a.button {
-    font-family: @font-montserrat;
     font-size: 16px;
     text-transform: uppercase;
     text-decoration: none;
@@ -24,6 +24,7 @@ body {
   .section-title {
     font-family: @font-montserrat;
     font-size: 20px;
+    font-weight: normal;
     text-transform: uppercase;
 
     &:after {
@@ -39,7 +40,14 @@ body {
   .section-subtitle {
     font-family: @font-roboto-slab;
     font-size: 16px;
+    font-weight: normal;
     margin-bottom: 50px;
+  }
+
+  .section-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
   }
 
   header {
@@ -78,7 +86,6 @@ body {
           padding-left: 20px;
 
           a {
-            font-family: @font-montserrat;
             font-size: 14px;
             color: white;
             text-decoration: none;
@@ -178,6 +185,45 @@ body {
 
         &:hover {
           background: @color-background-icon url('../images/icons.png') -229px -110px;
+        }
+      }
+    }
+  }
+
+  .section-about {
+    width: 100%;
+    text-align: center;
+    padding: 100px 0;
+    color: @color-grey;
+    background-color: @color-light-grey;
+    .container;
+
+    .about-content {
+      padding: 10px 10px;
+      margin: auto;
+      .section-content;
+
+      p {
+        text-align: left;
+      }
+
+      .about-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .about-name {
+          font-family: @font-montserrat;
+          font-size: 14px;
+          text-transform: uppercase;
+          margin: 20px 0 15px 0;
+        }
+
+        .about-status {
+          font-family: @font-roboto-slab;
+          margin: 0;
+          font-size: 13px;
         }
       }
     }
