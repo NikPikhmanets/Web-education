@@ -1,0 +1,10 @@
+@media screen and (max-width: 600px) {
+    nav {
+        visibility: hidden;
+    }
+
+    .service-content {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
