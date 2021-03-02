@@ -199,8 +199,7 @@ body {
     .container;
 
     .about-content {
-      padding: 10px 10px;
-      margin: auto;
+      margin: auto 10px;
       .section-content;
 
       p {
@@ -212,6 +211,17 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding-top: 70px;
+
+        img {
+          display: block;
+          transition: opacity .1s linear;
+        }
+
+        img:hover {
+          //filter: brightness(40%);
+          opacity: .6;
+        }
 
         .about-name {
           font-family: @font-montserrat;
