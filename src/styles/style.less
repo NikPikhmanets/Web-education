@@ -226,19 +226,65 @@ body {
         }
 
         .social-icons {
-          padding: 5px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
           position: absolute;
           opacity: 0;
-          transition: opacity .1s linear;
+          transition: all .1s linear;
+
+          a {
+            background-image: url(../images/about/icons_2.png);
+            background-repeat: no-repeat;
+            //display: block;
+            height: 25px;
+            width: 25px;
+            transition: all 350ms ease-out;
+            -webkit-transition: all 350ms ease-out;
+            -o-transition: all 350ms ease-out;
+          }
+
+          .facebook-icon {
+            background-position: 8px 4px;
+
+            &:hover {
+              background-color: @color-background-icon;
+            }
+          }
+
+          .twitter-icon {
+            background-position: -22px 4px;
+
+            &:hover {
+              background-color: @color-background-icon;
+            }
+          }
+
+          .google-icon {
+            background-position: -52px 4px;
+
+            &:hover {
+              background-color: @color-background-icon;
+            }
+          }
+
+          .linkedin-icon {
+            background-position: -82px 4px;
+
+            &:hover {
+              background-color: @color-background-icon;
+            }
+          }
         }
 
-        &:hover img {
-          opacity: .7;
-        }
+        &:hover {
+          img {
+            filter: brightness(60%);
+          }
 
-        &:hover .social-icons {
-          opacity: 1;
-          background: @color-background-icon;
+          .social-icons {
+            opacity: 1;
+          }
         }
 
         .about-name {
