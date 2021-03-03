@@ -126,67 +126,61 @@ body {
       display: flex;
       justify-content: space-between;
 
-      h3 {
-        font-family: @font-montserrat;
-        font-size: 14px;
-        font-weight: normal;
-        text-transform: uppercase;
-      }
-
-      p {
-        font-size: 14px;
-        margin: 0 10px;
-        padding-top: 24px;
-      }
-
-      .icons-service {
-        border-radius: 50%;
-        border: solid 2px @color-border-icon;
-        height: 90px;
-        width: 90px;
-        margin: 70px 0 30px;
-      }
-
-      .sprite {
-        position: relative;
-
-        &:before {
-          position: absolute;
-          content: '';
-          height: 44px;
-          width: 46px;
-          top: 0;
+      .service-items {
+        h3 {
+          font-family: @font-montserrat;
+          font-size: 14px;
+          font-weight: normal;
+          text-transform: uppercase;
         }
 
-        .icons-service-first::before {
-          background: url('../images/icons.png') no-repeat 0 0;
+        p {
+          font-size: 14px;
+          margin: 0 10px;
+          padding-top: 24px;
         }
-      }
 
-      //.icons-service-first {
-      //
-      //  &:before {
-      //
-      //  }
+        .service-icons {
+          a {
+            display: inline-block;
+            border-radius: 50%;
+            border: solid 2px @color-border-icon;
+            height: 90px;
+            width: 90px;
+            margin: 70px 0 30px;
 
-      //&:hover {
-      //  background: @color-background-icon url('../images/icons.png') 0 -110px;
-      //}
-      //}
+            background-image: url('../images/icons.png');
+            background-repeat: no-repeat;
+          }
 
-      .icons-service-second {
-        background: url('../images/icons.png') -110px 0;
+          .service-icon-first {
+            background-position: 23px 16px;
+          }
+
+          .service-icon-second {
+            background-position: -91px 20px;
+          }
+
+          .service-icon-third {
+            background-position: -208px 20px;
+          }
+        }
 
         &:hover {
-          background: @color-background-icon url('../images/icons.png') -110px -110px;
-        }
-      }
+          .service-icon-first {
+            background-color: @color-background-icon;
+            background-position: 23px -90px;
+          }
 
-      .icons-service-third {
-        background: url('../images/icons.png') -229px 0;
+          .service-icon-second {
+            background-color: @color-background-icon;
+            background-position: -91px -87px;
+          }
 
-        &:hover {
-          background: @color-background-icon url('../images/icons.png') -229px -110px;
+          .service-icon-third {
+            background-color: @color-background-icon;
+            background-position: -207px -87px;
+          }
         }
       }
     }
@@ -269,7 +263,7 @@ body {
           }
 
           .linkedin-icon {
-            background-position: -82px 4px;
+            background-position: -85px 4px;
 
             &:hover {
               background-color: @color-background-icon;
