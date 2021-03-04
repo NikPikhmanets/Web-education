@@ -467,7 +467,47 @@ body {
   }
 
   .recent-blog-posts {
+    .container;
     padding: 100px 0;
     text-align: center;
+    color: @color-grey;
+
+    .rbp-items {
+
+      .rbp-item {
+        display: flex;
+        text-align: left;
+
+        padding-bottom: 40px;
+
+        .rbp-content {
+          padding: 40px;
+        }
+      }
+
+      h3 {
+        font-family: @font-montserrat;
+        font-weight: normal;
+        font-size: 16px;
+      }
+
+      p {
+        font-family: @font-roboto-slab;
+        font-size: 14px;
+      }
+
+      .rbp-italics-text {
+        font-size: 13px;
+        font-style: italic;
+      }
+
+      a {
+        font-family: @font-roboto-slab;
+        font-weight: bold;
+        font-size: 13px;
+        text-decoration: none;
+        color: #777;
+      }
+    }
   }
 }
