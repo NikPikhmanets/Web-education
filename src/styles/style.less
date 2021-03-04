@@ -1,9 +1,12 @@
 @font-montserrat: 'Montserrat', sans-serif;
 @font-roboto-slab: 'Roboto-SLab', sans-serif;
+
 @color-grey: #555;
 @color-light-grey: #f8f8f8;
 @color-background-icon: #c0301c;
 @color-border-icon: #ddd;
+
+@margin-arrows-about: 26px;
 
 body {
   margin: 0 0;
@@ -205,6 +208,8 @@ body {
     }
 
     .about-media-content {
+      padding: 0 10px;
+      position: relative;
       .section-content;
 
       .about-item {
@@ -294,12 +299,20 @@ body {
         }
       }
 
-      .arrow-left {
+      .arrows {
+        display: inline-block;
         width: 35px;
         height: 38px;
+        z-index: 20;
+        position: absolute;
         background-image: url(../images/arrows.png);
-        background-color: @color-light-grey;
+        background-color: @color-grey;
         background-repeat: no-repeat;
+      }
+
+      .arrow-left {
+        margin-left: @margin-arrows-about;
+        left: 0;
         background-position: 12px 13px;
 
         &:hover {
@@ -308,11 +321,8 @@ body {
       }
 
       .arrow-right {
-        width: 35px;
-        height: 38px;
-        background-image: url(../images/arrows.png);
-        background-color: @color-light-grey;
-        background-repeat: no-repeat;
+        margin-right: @margin-arrows-about;
+        right: 0;
         background-position: -15px 13px;
 
         &:hover {
