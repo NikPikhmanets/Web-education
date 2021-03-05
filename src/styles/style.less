@@ -316,26 +316,22 @@ body {
         background-image: url(../images/arrows.png);
         background-color: @color-grey;
         background-repeat: no-repeat;
+
+        &:hover {
+          background-color: @color-background-icon;
+        }
       }
 
       .arrow-left {
         margin-left: @margin-arrows-about;
         left: 0;
         background-position: 12px 13px;
-
-        &:hover {
-          background-color: @color-background-icon;
-        }
       }
 
       .arrow-right {
         margin-right: @margin-arrows-about;
         right: 0;
         background-position: -15px 13px;
-
-        &:hover {
-          background-color: @color-background-icon;
-        }
       }
     }
   }
@@ -432,7 +428,7 @@ body {
     }
   }
 
-  .get-in-touch {
+  .banner-get-in-touch {
     .container;
     position: relative;
     background: url('../images/bg_2.jpg') center no-repeat;
@@ -539,23 +535,148 @@ body {
         }
 
         &:hover {
-          h3 {
-            color: @color-background-icon;
-          }
-
-          a {
-            color: @color-background-icon;
-          }
-
-          .rbp-author {
-            color: @color-background-icon;
-          }
-
-          .rbp-group {
+          h3, a, .rbp-author, .rbp-group {
             color: @color-background-icon;
           }
         }
       }
     }
+  }
+
+  .media {
+    .container;
+    height: 500px;
+    background-color: @color-light-grey;
+  }
+
+  .contacts {
+    .container;
+    color: @color-grey;
+    text-align: center;
+    padding: 100px 0;
+
+    .contacts-content {
+      padding: 0 100px;
+      display: flex;
+      justify-content: start;
+
+      .contacts-address {
+        width: 250px;
+
+        span {
+          white-space: nowrap;
+        }
+
+        .contacts-text-content {
+          padding: 0 0 10px 30px;
+          text-align: left;
+        }
+
+        h4 {
+          font-family: @font-montserrat;
+          font-size: 14px;
+          font-weight: normal;
+          text-transform: uppercase;
+          margin: 0;
+        }
+
+        p {
+          font-family: @font-roboto-slab;
+          font-size: 12px;
+          line-height: 20px;
+        }
+
+        .contacts-icons {
+          width: 20px;
+          height: 20px;
+          background-image: url(../images/contacts/icons_4.png);
+          background-repeat: no-repeat;
+          position: absolute;
+        }
+
+        .icon-address {
+          .contacts-icons;
+          background-position: 1px 0;
+        }
+
+        .icon-hotline {
+          .contacts-icons;
+          background-position: 1px -30px;
+        }
+
+        .icon-email {
+          .contacts-icons;
+          background-position: 1px -58px;
+        }
+      }
+    }
+
+    .contacts-form {
+      .form-group {
+        float: left;
+        width: 100%;
+      }
+
+      .form-control {
+        padding: 3px;
+        box-sizing: border-box;
+        float: left;
+      }
+
+      .form-control input,
+      .form-control textarea {
+        box-sizing: border-box;
+        width: 100%;
+      }
+
+      .form-control textarea {
+        resize: vertical;
+      }
+
+      #form-group-1 .form-control {
+        width: 50%;
+      }
+
+      #form-group-2 .form-control {
+        width: 50%;
+      }
+
+      #form-group-3 .form-control {
+        width: 100%;
+      }
+
+      input[type=text], textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 0;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+
+        &:focus {
+          border-color: @color-background-icon;
+        }
+
+        input[type=submit] {
+          background-color: white;
+          color: @color-grey;
+          padding: 12px 20px;
+          border: solid 1px @color-grey;
+          cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+          color: white;
+          background-color: @color-background-icon;
+        }
+      }
+    }
+  }
+
+  footer {
+    .container;
+    height: 300px;
+    background-color: @color-background-icon;
   }
 }

@@ -7,4 +7,12 @@
         flex-wrap: wrap;
         justify-content: center;
     }
+
+    #form-group-1 .form-control {
+        width: 50%;
+    }
+
+    #form-group-2 .form-control {
+        width: 66.6666%;
+    }
 }
