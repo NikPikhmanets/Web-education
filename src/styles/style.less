@@ -443,6 +443,7 @@ body {
       padding: 100px 0;
       display: flex;
       flex-direction: column;
+      justify-content: space-between;
       align-items: center;
     }
 
@@ -472,55 +473,60 @@ body {
     text-align: center;
     color: @color-grey;
 
-    .rbp-items {
+    .rbp-content {
 
       .rbp-item {
         display: flex;
         padding-bottom: 40px;
 
-        .rbp-content {
+        .rbp-text-content {
           padding: 40px;
+          display: grid;
+          justify-items: start;
           text-align: left;
 
           .rbp-top-content {
             display: flex;
-            justify-content: space-around;
-            align-items: center;
-          }
 
-          .rbp-date {
-            font-family: @font-montserrat;
-            font-weight: bold;
-            border: solid 2px @color-grey;
-            padding: 22px 20px;
-            width: 100%;
-            float: left;
-            margin: 0 10px 10px 0;
-            display: inline;
+            .rbp-date {
+              display: block;
+              font-family: @font-montserrat;
+              font-weight: bold;
+              border: solid 2px @color-grey;
+              padding: 20px 22px;
+              margin: 0 10px 10px 0;
 
-            .rbp-date-day {
-              font-size: 24px;
+              .rbp-date-day {
+                font-size: 24px;
+              }
+
+              .rbp-date-month {
+                font-size: 14px;
+              }
             }
 
-            .rbp-date-month {
-              font-size: 14px;
-            }
-          }
+            .rbp-titles {
+              margin-left: 26px;
 
-          h3 {
-            font-family: @font-montserrat;
-            font-weight: normal;
-            font-size: 16px;
+              h3 {
+
+                font-family: @font-montserrat;
+                font-weight: normal;
+                font-size: 16px;
+              }
+
+              h4 {
+                font-family: @font-roboto-slab;
+                font-weight: normal;
+                font-size: 13px;
+                font-style: italic;
+              }
+            }
           }
 
           p {
             font-family: @font-roboto-slab;
             font-size: 14px;
-          }
-
-          .rbp-italics-text {
-            font-size: 13px;
-            font-style: italic;
           }
 
           a {
@@ -529,6 +535,24 @@ body {
             font-size: 13px;
             text-decoration: none;
             color: #777;
+          }
+        }
+
+        &:hover {
+          h3 {
+            color: @color-background-icon;
+          }
+
+          a {
+            color: @color-background-icon;
+          }
+
+          .rbp-author {
+            color: @color-background-icon;
+          }
+
+          .rbp-group {
+            color: @color-background-icon;
           }
         }
       }
