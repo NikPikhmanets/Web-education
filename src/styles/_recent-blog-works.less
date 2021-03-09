@@ -1,0 +1,82 @@
+@import "_variable";
+@import "_container";
+
+.recent-blog-posts {
+  .container;
+  padding: 100px 0;
+  text-align: center;
+  color: @color-grey;
+
+  .rbp-content {
+
+    .rbp-item {
+      display: flex;
+      padding-bottom: 40px;
+
+      .rbp-text-content {
+        padding: 40px;
+        display: grid;
+        justify-items: start;
+        text-align: left;
+
+        .rbp-top-content {
+          display: flex;
+
+          .rbp-date {
+            display: block;
+            font-family: @font-montserrat;
+            font-weight: bold;
+            border: solid 2px @color-grey;
+            padding: 20px 22px;
+            margin: 0 10px 10px 0;
+
+            .rbp-date-day {
+              font-size: 24px;
+            }
+
+            .rbp-date-month {
+              font-size: 14px;
+            }
+          }
+
+          .rbp-titles {
+            margin-left: 26px;
+
+            h3 {
+
+              font-family: @font-montserrat;
+              font-weight: normal;
+              font-size: 16px;
+            }
+
+            h4 {
+              font-family: @font-roboto-slab;
+              font-weight: normal;
+              font-size: 13px;
+              font-style: italic;
+            }
+          }
+        }
+
+        p {
+          font-family: @font-roboto-slab;
+          font-size: 14px;
+        }
+
+        a {
+          font-family: @font-roboto-slab;
+          font-weight: bold;
+          font-size: 13px;
+          text-decoration: none;
+          color: #777;
+        }
+      }
+
+      &:hover {
+        h3, a, .rbp-author, .rbp-group {
+          color: @color-background-icon;
+        }
+      }
+    }
+  }
+}

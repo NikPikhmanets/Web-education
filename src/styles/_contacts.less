@@ -1,0 +1,137 @@
+@import "_variable";
+@import "_container";
+
+.contacts {
+  .container;
+  color: @color-grey;
+  text-align: center;
+  padding: 100px 0;
+
+  .contacts-content {
+    padding: 0 100px;
+    display: flex;
+
+    .contacts-address {
+      width: 30%;
+
+      span {
+        white-space: nowrap;
+      }
+
+      .contacts-text-content {
+        padding: 0 0 10px 30px;
+        text-align: left;
+      }
+
+      h4 {
+        font-family: @font-montserrat;
+        font-size: 14px;
+        font-weight: normal;
+        text-transform: uppercase;
+        margin: 0;
+      }
+
+      p {
+        font-family: @font-roboto-slab;
+        font-size: 12px;
+        line-height: 20px;
+      }
+
+      .contacts-icons {
+        width: 20px;
+        height: 20px;
+        background-image: url(../images/contacts/icons_4.png);
+        background-repeat: no-repeat;
+        position: absolute;
+      }
+
+      .icon-address {
+        .contacts-icons;
+        background-position: 1px 0;
+      }
+
+      .icon-hotline {
+        .contacts-icons;
+        background-position: 1px -30px;
+      }
+
+      .icon-email {
+        .contacts-icons;
+        background-position: 1px -58px;
+      }
+    }
+
+    .contacts-form {
+      width: 60%;
+      height: 100%;
+
+      .form-group {
+        float: left;
+        width: 100%;
+
+        .form-control {
+          box-sizing: border-box;
+          float: left;
+          padding: 5px;
+
+          p {
+            font-family: @font-roboto-slab;
+            font-size: 12px;
+            padding-left: 40px;
+          }
+        }
+
+        .form-control input,
+        .form-control textarea {
+          box-sizing: border-box;
+          width: 100%;
+        }
+      }
+
+      #form-group-1 .form-control {
+        width: 50%;
+      }
+
+      #form-group-2 .form-control {
+        width: 50%;
+      }
+
+      #form-group-3 .form-control {
+        width: 100%;
+      }
+
+      #form-group-4 {
+        display: flex;
+        align-items: center;
+      }
+
+      input, textarea {
+        color: @color-grey;
+        text-transform: uppercase;
+        border: 1px solid @color-grey;
+      }
+
+      input[type=text], textarea {
+        width: 100%;
+        padding: 12px;
+        resize: vertical;
+
+        &:focus {
+          outline: none !important;
+          border-color: @color-background-icon;
+        }
+      }
+
+      input[type=submit] {
+        background-color: white;
+        padding: 17px 36px;
+        cursor: pointer;
+      }
+
+      input[type=submit]:hover {
+        color: white;
+        background-color: @color-background-icon;
+      }
+    }
+  }
+}

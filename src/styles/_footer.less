@@ -1,0 +1,45 @@
+@import "_variable";
+@import "_container";
+
+footer {
+  .container;
+  color: white;
+  font-size: 12px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 100px 0;
+  background-color: @color-background-icon;
+
+  .footer-icons {
+    display: flex;
+    justify-content: center;
+
+    a {
+      background-image: url(../images/footer/icons_3.png);
+      background-repeat: no-repeat;
+      height: 35px;
+      width: 35px;
+      margin: 0 8px;
+      border-radius: 50%;
+      border: solid 2px #ffffff;
+    }
+
+    .twitter-icon {
+      background-position: 10px 12px;
+
+      &:hover {
+        background-position: -20px 12px;
+        background-color: white;
+      }
+    }
+  }
+
+  p:before {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 2px;
+    margin: 30px auto;
+    background-color: white;
+  }
+}

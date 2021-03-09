@@ -1,0 +1,74 @@
+@import "_variable";
+@import "_container";
+
+.service {
+  text-align: center;
+  padding: 100px 0;
+  background: white;
+  color: @color-grey;
+  .container;
+
+  .service-content {
+    .container;
+    display: flex;
+    justify-content: space-between;
+
+    .service-items {
+      h3 {
+        font-family: @font-montserrat;
+        font-size: 14px;
+        font-weight: normal;
+        text-transform: uppercase;
+      }
+
+      p {
+        font-size: 14px;
+        margin: 0 10px;
+        padding-top: 24px;
+      }
+
+      .service-icons {
+        a {
+          display: inline-block;
+          border-radius: 50%;
+          border: solid 2px @color-border-icon;
+          height: 90px;
+          width: 90px;
+          margin: 70px 0 30px;
+
+          background-image: url('../images/icons.png');
+          background-repeat: no-repeat;
+        }
+
+        .service-icon-first {
+          background-position: 23px 16px;
+        }
+
+        .service-icon-second {
+          background-position: -91px 20px;
+        }
+
+        .service-icon-third {
+          background-position: -208px 20px;
+        }
+      }
+
+      &:hover {
+        .service-icon-first {
+          background-color: @color-background-icon;
+          background-position: 23px -90px;
+        }
+
+        .service-icon-second {
+          background-color: @color-background-icon;
+          background-position: -91px -87px;
+        }
+
+        .service-icon-third {
+          background-color: @color-background-icon;
+          background-position: -207px -87px;
+        }
+      }
+    }
+  }
+}
