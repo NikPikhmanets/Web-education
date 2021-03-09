@@ -2,18 +2,24 @@
 @import "_container";
 
 .service {
+  .container;
   text-align: center;
   padding: 100px 0;
   background: white;
   color: @color-grey;
-  .container;
+
+  p {
+    margin: 0 10px;
+  }
 
   .service-content {
     .container;
-    display: flex;
-    justify-content: space-between;
+    display: block;
+    flex-wrap: wrap;
+    justify-content: center;
 
     .service-items {
+
       h3 {
         font-family: @font-montserrat;
         font-size: 14px;
@@ -23,7 +29,7 @@
 
       p {
         font-size: 14px;
-        margin: 0 10px;
+        margin: 0 20px;
         padding-top: 24px;
       }
 

@@ -1,0 +1,40 @@
+@media screen and (max-width: 600px) {
+  .service-content {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .about-items-2,
+  .about-items-3,
+  .about-items-4 {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 786px) {
+  .about-items-2, .about-items-3 {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .service-content {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  .about-us {
+    .about-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      column-gap: 20px;
+      margin: 0 10px;
+    }
+
+    .about-items-4 {
+      display: none;
+    }
+  }
+}

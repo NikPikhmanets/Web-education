@@ -1,12 +1,6 @@
 @import "_variable";
 @import "_container";
 
-.section-content {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
 .about-us {
   width: 100%;
   text-align: center;
@@ -15,35 +9,33 @@
   background-color: @color-light-grey;
   .container;
 
+  p {
+    margin: auto 40px;
+  }
+
   .about-content {
-    .section-content;
-    column-gap: 40px;
+    display: block;
 
-    article {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-
-      p {
-        padding: 0 20px;
-        text-align: left;
-      }
+    .about-content-item {
+      margin: 40px 20px;
+      text-align: justify;
     }
   }
 
   .about-media-content {
-    padding: 0 10px;
     position: relative;
-    .section-content;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 
-    .about-item {
-      display: flex;
+    .about-items, .about-items-2, .about-items-3, .about-items-4 {
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding-top: 70px;
 
       img {
+        max-width: 100%;
+        height: auto;
         position: relative;
         transition: opacity .2s linear;
       }
@@ -126,10 +118,11 @@
     }
 
     .arrows {
-      display: inline-block;
+      cursor: pointer;
       width: 35px;
       height: 38px;
       z-index: 20;
+      margin-top: -50px;
       position: absolute;
       background-image: url(../images/arrows.png);
       background-color: @color-grey;
