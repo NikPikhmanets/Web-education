@@ -47,7 +47,7 @@
       background: url(../images/emblems/logo4.jpg) no-repeat center;
 
       &:hover {
-        background: url(../images/emblems/logo_4.jpg) no-repeat center;
+        background: url(../images/emblems/logo-4.jpg) no-repeat center;
       }
     }
 
@@ -56,7 +56,7 @@
       background: url(../images/emblems/logo5.jpg) no-repeat center;
 
       &:hover {
-        background: url(../images/emblems/logo_5.jpg) no-repeat center;
+        background: url(../images/emblems/logo-5.jpg) no-repeat center;
       }
     }
   }
@@ -69,5 +69,24 @@
 
   .me-bottom-text {
     font-size: 20px;
+  }
+
+  .me-indicators {
+    display: flex;
+    height: 13px;
+    justify-content: center;
+    padding-top: 40px;
+
+    .me-indicator {
+      height: 13px;
+      width: 13px;
+      border-radius: 50%;
+      margin: 0 5px;
+      background-color: @color-border-icon;
+    }
+
+    .me-active-indicator {
+      background-color: @color-background-icon
+    }
   }
 }
