@@ -1,8 +1,73 @@
 @import "_variable";
 @import "_container";
 
-.media {
+.media-emblems {
   .container;
-  height: 500px;
+  font-family: @font-roboto-slab;
+  font-weight: normal;
+  text-align: center;
+  color: @color-grey;
+  padding: 100px 0;
   background-color: @color-light-grey;
+
+  .emblems {
+    height: 50px;
+    display: flex;
+    justify-content: space-evenly;
+
+    .me-logo1 {
+      width: 150px;
+      background: url(../images/emblems/logo1.jpg) no-repeat center;
+
+      &:hover {
+        background: url(../images/emblems/logo-1.png) no-repeat center;
+      }
+    }
+
+    .me-logo2 {
+      width: 150px;
+      background: url(../images/emblems/logo2.jpg) no-repeat center;
+
+      &:hover {
+        background: url(../images/emblems/logo-2.png) no-repeat center;
+      }
+    }
+
+    .me-logo3 {
+      width: 150px;
+      background: url(../images/emblems/logo3.jpg) no-repeat center;
+
+      &:hover {
+        background: url(../images/emblems/logo-3.png) no-repeat center;
+      }
+    }
+
+    .me-logo4 {
+      width: 150px;
+      background: url(../images/emblems/logo4.jpg) no-repeat center;
+
+      &:hover {
+        background: url(../images/emblems/logo_4.jpg) no-repeat center;
+      }
+    }
+
+    .me-logo5 {
+      width: 150px;
+      background: url(../images/emblems/logo5.jpg) no-repeat center;
+
+      &:hover {
+        background: url(../images/emblems/logo_5.jpg) no-repeat center;
+      }
+    }
+  }
+
+  .me-text {
+    font-size: 18px;
+    font-style: italic;
+    padding: 40px 150px 0;
+  }
+
+  .me-bottom-text {
+    font-size: 20px;
+  }
 }
