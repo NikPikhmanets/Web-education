@@ -30,65 +30,80 @@
     }
   }
 
-  .lw-content {
-    padding: 30px 20px 0;
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    grid-gap: 30px;
+  .lw-content-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 
-    .lw-item {
-      width: 360px;
-      height: 320px;
-      display: flex;
-      position: relative;
-      justify-content: center;
-      align-items: center;
+    //padding: 30px 20px 0;
+    //display: grid;
+    //grid-template-columns: repeat(3, auto);
+    //grid-gap: 30px;
 
-      .lw-img {
-        width: 360px;
-        height: 320px;;
-        background: @color-background-icon;
+    .lw-content-column {
+      flex: 25%;
+      max-width: 25%;
+      padding: 0 4px;
+
+      img {
+        margin-top: 8px;
+        vertical-align: middle;
+        width: 100%;
       }
 
-      &:hover {
-        img {
-          opacity: .5;
-          transition: opacity .2s linear;
-        }
+      //.lw-item {
+      //display: flex;
+      //position: relative;
+      //justify-content: center;
+      //align-items: center;
 
-        .lw-text {
-          opacity: 1;
-        }
-      }
+      //.lw-img {
+      //width: 360px;
+      //height: 320px;;
+      //background: @color-background-icon;
+      //}
 
-      .lw-text {
-        color: white;
-        display: inline-block;
-        position: absolute;
-        opacity: 0;
+      //&:hover {
+      //  img {
+      //    opacity: .5;
+      //    transition: opacity .2s linear;
+      //  }
 
-        .lw-top-text {
-          font-family: @font-montserrat;
-          font-size: 18px;
-        }
-
-        .lw-middle-text {
-          margin: 10px auto 40px;
-          font-family: @font-roboto-slab;
-          font-size: 12px;
-        }
-
-        .lw-text-button {
-          font-family: @font-roboto-slab;
-          font-size: 14px;
-          text-transform: uppercase;
-          text-decoration: none;
-          border: 0 solid;
-          padding: 15px 20px;
-          color: @color-background-icon;
-          background-color: white;
-        }
-      }
+      //.lw-text {
+      //  opacity: 1;
+      //}
+      //}
+      //
+      //.lw-text {
+      //  display: none;
+      //  color: white;
+      //  display: inline-block;
+      //  position: absolute;
+      //  opacity: 0;
+      //
+      //  .lw-top-text {
+      //    font-family: @font-montserrat;
+      //    font-size: 18px;
+      //  }
+      //
+      //  .lw-middle-text {
+      //    margin: 10px auto 40px;
+      //    font-family: @font-roboto-slab;
+      //    font-size: 12px;
+      //  }
+      //
+      //  .lw-text-button {
+      //    font-family: @font-roboto-slab;
+      //    font-size: 14px;
+      //    text-transform: uppercase;
+      //    text-decoration: none;
+      //    border: 0 solid;
+      //    padding: 15px 20px;
+      //    color: @color-background-icon;
+      //    background-color: white;
+      //  }
+      //}
+      //}
     }
   }
 }
