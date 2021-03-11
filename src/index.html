@@ -7,13 +7,20 @@
     <link rel="stylesheet/less" type="text/css" href="styles/style.less">
     <link rel="stylesheet/less" type="text/css" href="styles/media.less">
     <script src="js/less.js"></script>
+    <script src="js/main.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap"
           rel="stylesheet">
 </head>
 <body>
 <header>
-    <nav>
+    <div class="toggle-nav" onclick="openNav()">
+        <a href="#"></a>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <nav id="header-nav" style="display: none">
         <a href="#" class="logo">Startup </a>
         <menu>
             <li><a href="#">Home</a></li>
@@ -25,7 +32,7 @@
             <li><a href="#">Contact</a></li>
         </menu>
     </nav>
-    <div class="intro">
+    <div class="intro" id="header-intro">
         <h1>Welcome to STARTUP</h1>
         <p>Your Favourite Creative Agency Template</p>
         <a href="#" class="button">Get started</a>
@@ -142,10 +149,10 @@
             <p class="about-status">Front-end Developer</p>
         </div>
         <div class="arrows arrow-left">
-            <a onclick="plusSlides(-1)"></a>
+            <!--            <a onclick="plusSlides(-1)"></a>-->
         </div>
         <div class="arrows arrow-right">
-            <a onclick="plusSlides(1)"></a>
+            <!--            <a onclick="plusSlides(1)"></a>-->
         </div>
 
     </div>
@@ -260,7 +267,6 @@
             </div>
         </div>
     </div>
-
 </section>
 
 <section class="banner-get-in-touch">
