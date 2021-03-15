@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet/less" type="text/css" href="styles/style.less">
     <link rel="stylesheet/less" type="text/css" href="styles/media.less">
-    <script defer src="js/less.js"></script>
+    <script src="js/less.js"></script>
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script defer src="js/main.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap"
@@ -14,15 +15,9 @@
 </head>
 <body>
 <header>
-    <div class="toggle-nav" onclick="openNav()">
-        <a href="#"></a>
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
     <nav id="h-nav">
-        <a href="#" class="logo">Startup </a>
-        <menu>
+        <a href="#" class="h-logo">Startup </a>
+        <menu class="h-menu">
             <li><a href="#">Home</a></li>
             <li><a href="#">Services</a></li>
             <li><a href="#">About</a></li>
@@ -36,6 +31,11 @@
         <h1>Welcome to STARTUP</h1>
         <p>Your Favourite Creative Agency Template</p>
         <a href="#" class="button">Get started</a>
+    </div>
+    <div class="toggle-nav">
+        <div></div>
+        <div></div>
+        <div></div>
     </div>
 </header>
 
@@ -148,8 +148,8 @@
             <p class="about-name">John Doe</p>
             <p class="about-status">Front-end Developer</p>
         </div>
-        <div class="arrows arrow-left" onclick="prevSlide(-1)"></div>
-        <div class="arrows arrow-right" onclick="nextSlide()"></div>
+        <div class="arrows arrow-left"></div>
+        <div class="arrows arrow-right"></div>
 
     </div>
 </section>
