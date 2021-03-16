@@ -6,9 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet/less" type="text/css" href="styles/style.less">
     <link rel="stylesheet/less" type="text/css" href="styles/media.less">
-    <script src="js/less.js"></script>
-    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script defer src="js/main.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap"
           rel="stylesheet">
@@ -96,8 +93,8 @@
             Loreipsum
             dolor sit amet. Lorem ipsum dolor et.</p>
     </div>
-    <div class="about-media-content">
-        <div class="about-items">
+    <div class="about-media-content slider">
+        <div class="about-items slide">
             <img src="images/about/img-01.jpg" alt="void">
             <div class="container-social-icons">
                 <div class="social-icons">
@@ -110,7 +107,7 @@
             <p class="about-name">Md. Khalil Uddin</p>
             <p class="about-status">Head of Ideas</p>
         </div>
-        <div class="about-items" id="au-item-2">
+        <div class="about-items slide" id="au-item-2">
             <img src="images/about/img-02.jpg" alt="void">
             <div class="container-social-icons">
                 <div class="social-icons">
@@ -123,7 +120,7 @@
             <p class="about-name">Rubel Miah</p>
             <p class="about-status">Lead WordPress Developer</p>
         </div>
-        <div class="about-items" id="au-item-3">
+        <div class="about-items slide" id="au-item-3">
             <img src="images/about/img-03.jpg" alt="void">
             <div class="container-social-icons">
                 <div class="social-icons">
@@ -135,7 +132,7 @@
             </div>
             <p class="about-name">Shamim Mia</p>
             <p class="about-status">Sr. Web Developer</p></div>
-        <div class="about-items" id="au-item-4">
+        <div class="about-items slide" id="au-item-4">
             <img src="images/about/img-04.jpg" alt="void">
             <div class="container-social-icons">
                 <div class="social-icons">
@@ -148,9 +145,8 @@
             <p class="about-name">John Doe</p>
             <p class="about-status">Front-end Developer</p>
         </div>
-        <div class="arrows arrow-left"></div>
-        <div class="arrows arrow-right"></div>
-
+        <div class="arrows arrow-left slide-prev"></div>
+        <div class="arrows arrow-right slide-next"></div>
     </div>
 </section>
 
@@ -438,6 +434,8 @@
     </div>
     <p>© 2015 Startup, Designed by ShapedTheme</p>
 </footer>
-
+<script src="js/less.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
