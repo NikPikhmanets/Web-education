@@ -28,103 +28,107 @@
 
   .about-media-content {
     position: relative;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 20px;
 
-    .about-items {
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+    .slider-wrapper {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      margin-top: 20px;
+      transition: transform 0.6s ease;
 
-      img {
-        max-width: 100%;
-        height: auto;
-        position: relative;
-        transition: opacity .2s linear;
-      }
+      .about-items {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
-      .container-social-icons {
-        display: grid;
-        justify-items: center;
-
-        .social-icons {
-          max-width: 100%;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          position: absolute;
-          opacity: 0;
-          transition: all .1s linear;
-          bottom: 0;
-          margin-bottom: 100px;
-
-          a {
-            background-image: url(../images/about/icons_2.png);
-            background-repeat: no-repeat;
-            height: 25px;
-            width: 25px;
-            transition: all 350ms ease-out;
-            -webkit-transition: all 350ms ease-out;
-            -o-transition: all 350ms ease-out;
-          }
-
-          .facebook-icon {
-            background-position: 8px 4px;
-
-            &:hover {
-              background-color: @color-background-icon;
-            }
-          }
-
-          .twitter-icon {
-            background-position: -22px 4px;
-
-            &:hover {
-              background-color: @color-background-icon;
-            }
-          }
-
-          .google-icon {
-            background-position: -52px 4px;
-
-            &:hover {
-              background-color: @color-background-icon;
-            }
-          }
-
-          .linkedin-icon {
-            background-position: -85px 4px;
-
-            &:hover {
-              background-color: @color-background-icon;
-            }
-          }
-        }
-      }
-
-      &:hover {
         img {
-          filter: brightness(60%);
+          max-width: 100%;
+          height: auto;
+          position: relative;
+          transition: opacity .2s linear;
         }
 
-        .social-icons {
-          opacity: 1;
+        .container-social-icons {
+          display: grid;
+          justify-items: center;
+
+          .social-icons {
+            max-width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: absolute;
+            opacity: 0;
+            transition: all .1s linear;
+            bottom: 0;
+            margin-bottom: 100px;
+
+            a {
+              background-image: url(../images/about/icons_2.png);
+              background-repeat: no-repeat;
+              height: 25px;
+              width: 25px;
+              transition: all 350ms ease-out;
+              -webkit-transition: all 350ms ease-out;
+              -o-transition: all 350ms ease-out;
+            }
+
+            .facebook-icon {
+              background-position: 8px 4px;
+
+              &:hover {
+                background-color: @color-background-icon;
+              }
+            }
+
+            .twitter-icon {
+              background-position: -22px 4px;
+
+              &:hover {
+                background-color: @color-background-icon;
+              }
+            }
+
+            .google-icon {
+              background-position: -52px 4px;
+
+              &:hover {
+                background-color: @color-background-icon;
+              }
+            }
+
+            .linkedin-icon {
+              background-position: -85px 4px;
+
+              &:hover {
+                background-color: @color-background-icon;
+              }
+            }
+          }
         }
-      }
 
-      .about-name {
-        font-family: @font-montserrat;
-        font-size: 14px;
-        text-transform: uppercase;
-        margin: 20px 0 15px 0;
-      }
+        &:hover {
+          img {
+            filter: brightness(60%);
+          }
 
-      .about-status {
-        font-family: @font-roboto-slab;
-        margin: 0;
-        font-size: 13px;
+          .social-icons {
+            opacity: 1;
+          }
+        }
+
+        .about-name {
+          font-family: @font-montserrat;
+          font-size: 14px;
+          text-transform: uppercase;
+          margin: 20px 0 15px 0;
+        }
+
+        .about-status {
+          font-family: @font-roboto-slab;
+          margin: 0;
+          font-size: 13px;
+        }
       }
     }
 
@@ -133,7 +137,7 @@
       width: 35px;
       height: 38px;
       z-index: 20;
-      margin-top: -50px;
+      top: 33%;
       position: absolute;
       background-image: url(../images/arrows.png);
       background-color: @color-grey;
