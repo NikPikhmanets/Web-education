@@ -28,12 +28,14 @@
 
   .about-media-content {
     position: relative;
+    overflow: hidden;
 
     .slider-wrapper {
       width: 100%;
       display: flex;
       margin-top: 20px;
-      transition: transform 0.6s ease;
+      justify-content: center;
+      transition: transform .8s ease;
 
       .about-items {
         padding: 0 20px;
@@ -50,7 +52,6 @@
           justify-items: center;
 
           .social-icons {
-            max-width: 100%;
             display: flex;
             justify-content: space-between;
             align-items: center;
