@@ -186,7 +186,6 @@ header .intro p {
 }
 .about-us .about-media-content {
   position: relative;
-  overflow: hidden;
 }
 .about-us .about-media-content .slider-wrapper {
   width: 100%;
@@ -194,6 +193,7 @@ header .intro p {
   margin-top: 20px;
   justify-content: center;
   transition: transform 0.8s ease;
+  box-sizing: border-box;
 }
 .about-us .about-media-content .slider-wrapper .about-items {
   padding: 0 20px;
@@ -269,28 +269,36 @@ header .intro p {
   font-size: 13px;
 }
 .about-us .about-media-content .arrows {
+  width: 100%;
+  top: 33%;
+  height: 38px;
+  padding: 0 20px;
+  display: flex;
+  position: absolute;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+.about-us .about-media-content .arrows .arrow-left {
   cursor: pointer;
   width: 35px;
-  height: 38px;
-  z-index: 20;
-  top: 33%;
-  position: absolute;
   background-image: url(../images/arrows.png);
   background-color: #555;
   background-repeat: no-repeat;
+  background-position: 12px 13px;
 }
-.about-us .about-media-content .arrows:hover {
+.about-us .about-media-content .arrows .arrow-left:hover {
   background-color: #c0301c;
 }
-.about-us .about-media-content .arrow-left {
-  margin-left: 20px;
-  left: 0;
-  background-position: 15px 13px;
-}
-.about-us .about-media-content .arrow-right {
-  margin-right: 20px;
-  right: 0;
+.about-us .about-media-content .arrows .arrow-right {
+  cursor: pointer;
+  width: 35px;
+  background-image: url(../images/arrows.png);
+  background-color: #555;
+  background-repeat: no-repeat;
   background-position: -15px 13px;
+}
+.about-us .about-media-content .arrows .arrow-right:hover {
+  background-color: #c0301c;
 }
 .latest-works {
   max-width: 1200px;
@@ -478,7 +486,7 @@ header .intro p {
 .recent-blog-posts .rbp-content .rbp-item:hover .rbp-group {
   color: #c0301c;
 }
-.media-emblems {
+.brands {
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
@@ -489,73 +497,73 @@ header .intro p {
   padding: 100px 0;
   background-color: #f8f8f8;
 }
-.media-emblems .emblems {
+.brands .brands-logos {
   height: 50px;
   display: flex;
   justify-content: space-evenly;
 }
-.media-emblems .emblems .me-logo1 {
+.brands .brands-logos .b-logo1 {
   width: 150px;
   background: url(../images/emblems/logo1.jpg) no-repeat center;
 }
-.media-emblems .emblems .me-logo1:hover {
+.brands .brands-logos .b-logo1:hover {
   background: url(../images/emblems/logo-1.png) no-repeat center;
 }
-.media-emblems .emblems .me-logo2 {
+.brands .brands-logos .b-logo2 {
   width: 150px;
   background: url(../images/emblems/logo2.jpg) no-repeat center;
 }
-.media-emblems .emblems .me-logo2:hover {
+.brands .brands-logos .b-logo2:hover {
   background: url(../images/emblems/logo-2.png) no-repeat center;
 }
-.media-emblems .emblems .me-logo3 {
+.brands .brands-logos .b-logo3 {
   width: 150px;
   background: url(../images/emblems/logo3.jpg) no-repeat center;
 }
-.media-emblems .emblems .me-logo3:hover {
+.brands .brands-logos .b-logo3:hover {
   background: url(../images/emblems/logo-3.png) no-repeat center;
 }
-.media-emblems .emblems .me-logo4 {
+.brands .brands-logos .b-logo4 {
   width: 150px;
   background: url(../images/emblems/logo4.jpg) no-repeat center;
 }
-.media-emblems .emblems .me-logo4:hover {
+.brands .brands-logos .b-logo4:hover {
   background: url(../images/emblems/logo-4.jpg) no-repeat center;
 }
-.media-emblems .emblems .me-logo5 {
+.brands .brands-logos .b-logo5 {
   width: 150px;
   background: url(../images/emblems/logo5.jpg) no-repeat center;
 }
-.media-emblems .emblems .me-logo5:hover {
+.brands .brands-logos .b-logo5:hover {
   background: url(../images/emblems/logo-5.jpg) no-repeat center;
 }
-.media-emblems .me-text {
+.brands .b-text {
   font-size: 18px;
   font-style: italic;
   padding: 40px 150px 0;
 }
-.media-emblems .me-bottom-text {
+.brands .b-bottom-text {
   font-size: 20px;
 }
-.media-emblems .me-indicators {
+.brands .b-indicators {
   display: flex;
   height: 13px;
   justify-content: center;
   padding-top: 40px;
 }
-.media-emblems .me-indicators .me-indicator {
+.brands .b-indicators .b-indicator {
   height: 13px;
   width: 13px;
   border-radius: 50%;
   margin: 0 5px;
   background-color: #ddd;
 }
-.media-emblems .me-indicators .me-active-indicator {
+.brands .b-indicators .b-active-indicator {
   background-color: #c0301c;
 }
-.media-emblems .me-indicators .me-i-4,
-.media-emblems .me-indicators .me-i-5,
-.media-emblems .me-indicators .me-i-6 {
+.brands .b-indicators .b-i-4,
+.brands .b-indicators .b-i-5,
+.brands .b-indicators .b-i-6 {
   display: none;
 }
 .contacts {
@@ -804,16 +812,16 @@ footer p:before {
   .recent-blog-posts img {
     display: none;
   }
-  .media-emblems .emblems .me-logo3,
-  .media-emblems .emblems .me-logo4,
-  .media-emblems .emblems .me-logo5 {
+  .brands .brands-logos .b-logo3,
+  .brands .brands-logos .b-logo4,
+  .brands .brands-logos .b-logo5 {
     display: none;
   }
-  .media-emblems .me-text,
-  .media-emblems .me-bottom-text {
+  .brands .b-text,
+  .brands .b-bottom-text {
     display: none;
   }
-  .media-emblems .me-indicators .me-i-6 {
+  .brands .b-indicators .b-i-6 {
     display: flex;
   }
   .contacts h3 {
@@ -876,12 +884,12 @@ footer p:before {
   .recent-blog-posts img {
     display: none;
   }
-  .media-emblems .emblems .me-logo4,
-  .media-emblems .emblems .me-logo5 {
+  .brands .brands-logos .b-logo4,
+  .brands .brands-logos .b-logo5 {
     display: none;
   }
-  .media-emblems .me-indicators .me-i-4,
-  .media-emblems .me-indicators .me-i-5 {
+  .brands .b-indicators .b-i-4,
+  .brands .b-indicators .b-i-5 {
     display: flex;
   }
   .contacts .contacts-content {
