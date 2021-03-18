@@ -1,8 +1,4 @@
 $(document).ready(function () {
-    $('.toggle-nav').on('click', function () {
-        $('#h-nav').toggleClass('responsive');
-    });
-
     $('.slider').slider({
         countElement: 2,
         slideScroll: 2
