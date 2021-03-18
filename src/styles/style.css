@@ -188,6 +188,7 @@ header .intro p {
   display: flex;
   position: relative;
   justify-content: center;
+  overflow: hidden;
 }
 .about-us .about-media-content .slider-wrapper {
   display: block ruby;
