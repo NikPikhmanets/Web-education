@@ -185,18 +185,17 @@ header .intro p {
   text-align: justify;
 }
 .about-us .about-media-content {
+  display: flex;
   position: relative;
+  justify-content: center;
 }
 .about-us .about-media-content .slider-wrapper {
-  width: 100%;
-  display: flex;
+  display: block ruby;
   margin-top: 20px;
-  justify-content: center;
-  transition: transform 0.8s ease;
-  box-sizing: border-box;
 }
 .about-us .about-media-content .slider-wrapper .about-items {
   padding: 0 20px;
+  box-sizing: border-box;
 }
 .about-us .about-media-content .slider-wrapper .about-items img {
   max-width: 100%;
@@ -856,10 +855,6 @@ footer p:before {
     display: block;
     flex-wrap: wrap;
     justify-content: center;
-  }
-  .about-us .about-media-content .slider-wrapper .about-items {
-    flex: 0 0 50%;
-    max-width: 50%;
   }
   .latest-works .lw-content-row .lw-content-column {
     flex: 40%;
