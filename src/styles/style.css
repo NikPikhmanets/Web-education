@@ -191,7 +191,7 @@ header .intro p {
   overflow: hidden;
 }
 .about-us .about-media-content .slider-wrapper {
-  display: block ruby;
+  display: flex;
   margin-top: 20px;
 }
 .about-us .about-media-content .slider-wrapper .about-items {
@@ -336,11 +336,7 @@ header .intro p {
   padding: 0 4px;
 }
 .latest-works .lw-content-row .lw-content-column .lw-item {
-  width: 100%;
-  display: flex;
-  position: relative;
-  align-content: center;
-  margin-top: 8px;
+  padding-top: 10px;
 }
 .latest-works .lw-content-row .lw-content-column .lw-item img {
   vertical-align: middle;
@@ -793,6 +789,8 @@ footer p:before {
   .latest-works .lw-content-row .lw-content-column {
     flex: 100%;
     max-width: 100%;
+    justify-content: center;
+    display: grid;
   }
   .latest-works .lw-content-row .lw-content-column .lw-item .lw-cover .lw-cover-content .lw-top-text {
     font-size: 9px;
