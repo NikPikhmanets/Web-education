@@ -789,11 +789,6 @@ footer p:before {
     flex-wrap: wrap;
     justify-content: center;
   }
-  #au-item-2,
-  #au-item-3,
-  #au-item-4 {
-    display: none;
-  }
   .latest-works .lw-content-row .lw-content-column {
     flex: 100%;
     max-width: 100%;
@@ -904,8 +899,6 @@ footer p:before {
   .contacts .contacts-content .contacts-form {
     width: 100%;
   }
-}
-@media screen and (min-width: 980px) {
 }
 body {
   margin: 0 0;
