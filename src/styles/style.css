@@ -546,6 +546,7 @@ header .intro p {
   font-size: 20px;
 }
 .brands .b-indicators {
+  cursor: pointer;
   display: flex;
   height: 13px;
   justify-content: center;

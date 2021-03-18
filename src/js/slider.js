@@ -3,6 +3,11 @@ $(document).ready(function () {
         countElement: 2,
         slideScroll: 1
     });
+
+    // $('.brands-logos').slider({
+    //     countElement: 4,
+    //     slideScroll: 1
+    // });
 });
 
 (function ($) {
@@ -10,6 +15,8 @@ $(document).ready(function () {
             let widthOfContainer = $(this).width() - 40,
                 sliderItem = $(this).children().children('.slide'),
                 sliderWrapper = $(this).children('.slider-wrapper'),
+                // sliderWrapper = $(this).childNodes(),
+                // sliderItem = $(sliderWrapper).children(),
                 sliderControls = $(this).children('.arrows'),
                 widthOfItem,
                 sliderWrapperWidth;
