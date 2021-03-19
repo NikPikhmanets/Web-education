@@ -311,8 +311,11 @@ header .intro p {
   text-align: center;
   letter-spacing: 2px;
   font-size: 16px;
+  margin-bottom: 20px;
 }
 .latest-works .lw-controls button {
+  font-family: 'Roboto-SLab', sans-serif;
+  font-size: 16px;
   color: #555;
   background: transparent;
   border: none;
@@ -333,10 +336,12 @@ header .intro p {
 .latest-works .lw-content-row .lw-content-column {
   flex: 30%;
   max-width: 30%;
-  padding: 0 4px;
+  display: grid;
 }
 .latest-works .lw-content-row .lw-content-column .lw-item {
-  padding-top: 10px;
+  display: flex;
+  position: relative;
+  margin: 10px;
 }
 .latest-works .lw-content-row .lw-content-column .lw-item img {
   vertical-align: middle;
@@ -926,3 +931,4 @@ body .section-subtitle {
   font-weight: normal;
   margin-bottom: 50px;
 }
+/*# sourceMappingURL=style.css.map */

@@ -10,8 +10,11 @@
     text-align: center;
     letter-spacing: 2px;
     font-size: 16px;
+    margin-bottom: 20px;
 
     button {
+      font-family: @font-roboto-slab;
+      font-size: 16px;
       color: @color-grey;
       background: transparent;
       border: none;
@@ -36,10 +39,12 @@
     .lw-content-column {
       flex: 30%;
       max-width: 30%;
-      padding: 0 4px;
+      display: grid;
 
       .lw-item {
-        padding-top: 10px;
+        display: flex;
+        position: relative;
+        margin: 10px;
 
         img {
           vertical-align: middle;
