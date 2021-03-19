@@ -9,6 +9,7 @@
   color: @color-grey;
   padding: 100px 0;
   background-color: @color-light-grey;
+  overflow: hidden;
 
   .brands-logos {
     height: 50px;
@@ -71,14 +72,14 @@
     font-size: 20px;
   }
 
-  .b-indicators {
+  .indicators {
     cursor: pointer;
     display: flex;
     height: 13px;
     justify-content: center;
     padding-top: 40px;
 
-    .b-indicator {
+    .indicator {
       height: 13px;
       width: 13px;
       border-radius: 50%;
@@ -90,9 +91,7 @@
       background-color: @color-background-icon
     }
 
-    .b-i-4,
-    .b-i-5,
-    .b-i-6 {
+    .invisible {
       display: none;
     }
   }

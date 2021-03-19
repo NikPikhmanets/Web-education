@@ -503,6 +503,7 @@ header .intro p {
   color: #555;
   padding: 100px 0;
   background-color: #f8f8f8;
+  overflow: hidden;
 }
 .brands .brands-logos {
   height: 50px;
@@ -552,26 +553,24 @@ header .intro p {
 .brands .b-bottom-text {
   font-size: 20px;
 }
-.brands .b-indicators {
+.brands .indicators {
   cursor: pointer;
   display: flex;
   height: 13px;
   justify-content: center;
   padding-top: 40px;
 }
-.brands .b-indicators .b-indicator {
+.brands .indicators .indicator {
   height: 13px;
   width: 13px;
   border-radius: 50%;
   margin: 0 5px;
   background-color: #ddd;
 }
-.brands .b-indicators .b-active-indicator {
+.brands .indicators .b-active-indicator {
   background-color: #c0301c;
 }
-.brands .b-indicators .b-i-4,
-.brands .b-indicators .b-i-5,
-.brands .b-indicators .b-i-6 {
+.brands .indicators .invisible {
   display: none;
 }
 .contacts {
@@ -826,7 +825,7 @@ footer p:before {
   .brands .b-bottom-text {
     display: none;
   }
-  .brands .b-indicators .b-i-6 {
+  .brands .indicators .invisible {
     display: flex;
   }
   .contacts h3 {
@@ -889,8 +888,7 @@ footer p:before {
   .brands .brands-logos .b-logo5 {
     display: none;
   }
-  .brands .b-indicators .b-i-4,
-  .brands .b-indicators .b-i-5 {
+  .brands .indicators .invisible {
     display: flex;
   }
   .contacts .contacts-content {
