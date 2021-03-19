@@ -464,11 +464,20 @@ header .intro p {
   font-weight: normal;
   font-size: 16px;
 }
+.recent-blog-posts .rbp-content .rbp-item .rbp-text-content .rbp-top-content .rbp-titles h3:hover {
+  color: #c0301c;
+}
 .recent-blog-posts .rbp-content .rbp-item .rbp-text-content .rbp-top-content .rbp-titles h4 {
   font-family: 'Roboto-SLab', sans-serif;
   font-weight: normal;
   font-size: 13px;
   font-style: italic;
+}
+.recent-blog-posts .rbp-content .rbp-item .rbp-text-content .rbp-top-content .rbp-titles h4 .rbp-author:hover {
+  color: #c0301c;
+}
+.recent-blog-posts .rbp-content .rbp-item .rbp-text-content .rbp-top-content .rbp-titles h4 .rbp-group:hover {
+  color: #c0301c;
 }
 .recent-blog-posts .rbp-content .rbp-item .rbp-text-content p {
   font-family: 'Roboto-SLab', sans-serif;
@@ -481,10 +490,7 @@ header .intro p {
   text-decoration: none;
   color: #777;
 }
-.recent-blog-posts .rbp-content .rbp-item:hover h3,
-.recent-blog-posts .rbp-content .rbp-item:hover a,
-.recent-blog-posts .rbp-content .rbp-item:hover .rbp-author,
-.recent-blog-posts .rbp-content .rbp-item:hover .rbp-group {
+.recent-blog-posts .rbp-content .rbp-item .rbp-text-content a:hover {
   color: #c0301c;
 }
 .brands {

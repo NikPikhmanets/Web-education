@@ -49,10 +49,13 @@
             margin-left: 26px;
 
             h3 {
-
               font-family: @font-montserrat;
               font-weight: normal;
               font-size: 16px;
+
+              &:hover {
+                color: @color-background-icon;
+              }
             }
 
             h4 {
@@ -60,6 +63,18 @@
               font-weight: normal;
               font-size: 13px;
               font-style: italic;
+
+              .rbp-author {
+                &:hover {
+                  color: @color-background-icon;
+                }
+              }
+
+              .rbp-group {
+                &:hover {
+                  color: @color-background-icon;
+                }
+              }
             }
           }
         }
@@ -75,14 +90,18 @@
           font-size: 13px;
           text-decoration: none;
           color: #777;
+
+          &:hover {
+            color: @color-background-icon;
+          }
         }
       }
 
-      &:hover {
-        h3, a, .rbp-author, .rbp-group {
-          color: @color-background-icon;
-        }
-      }
+      //&:hover {
+      //  h3, a, .rbp-author, .rbp-group {
+      //    color: @color-background-icon;
+      //  }
+      //}
     }
   }
 }
