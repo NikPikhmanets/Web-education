@@ -193,6 +193,7 @@ header .intro p {
 .about-us .about-media-content .slider-wrapper {
   display: flex;
   margin-top: 20px;
+  position: absolute;
 }
 .about-us .about-media-content .slider-wrapper .about-items {
   padding: 0 20px;

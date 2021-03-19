@@ -1,10 +1,10 @@
 $(document).ready(function () {
     $('.slider').slider({
-        countElement: 2,
+        countElement: 4,
         slideScroll: 1
     });
 
-    // $('.brands-logos').slider({
+    // $('.brands').slider({
     //     countElement: 4,
     //     slideScroll: 1
     // });
@@ -12,47 +12,56 @@ $(document).ready(function () {
 
 (function ($) {
         $.fn.slider = function (params) {
-            let widthOfContainer = $(this).width() - 40,
-                sliderItem = $(this).children().children('.slide'),
-                sliderWrapper = $(this).children('.slider-wrapper'),
-                // sliderWrapper = $(this).childNodes(),
-                // sliderItem = $(sliderWrapper).children(),
+            let options = $.extend({
+                countElement: params.countElement,
+                slideScroll: params.slideScroll
+            });
+
+            let container = $(this),
+                sliderItemsContainer = this.children().first(),
+                widthOfContainer = $(this).width(),
+                sliderItems = sliderItemsContainer.children(),
+                slideItemWidth = widthOfContainer / options.countElement,
+                slideItemHeight = sliderItems[0].clientHeight,
+                slideItemCount = sliderItemsContainer.children().length,
                 sliderControls = $(this).children('.arrows'),
-                widthOfItem,
-                sliderWrapperWidth;
+                widthOfItem;
 
             function init() {
-                widthOfItem = widthOfContainer / params.countElement;
-                sliderItem.outerWidth(widthOfItem);
-                sliderWrapperWidth = sliderWrapper.width(widthOfItem * params.countElement);
+                widthOfItem = slideItemWidth;
+                container.css('height', slideItemHeight);
+                sliderItemsContainer.css('width', slideItemWidth * slideItemCount);
+                sliderItems.css('width', slideItemWidth);
+                // sliderItemsContainer.children(':nth-child(-n+' + options.slideScroll + ')').appendTo(sliderItemsContainer);
+                // sliderItemsContainer.children(':nth-last-child(-n+' + options.slideScroll + ')').prependTo(sliderItemsContainer);
 
-                console.log('widthOfItem:' + widthOfItem)
+                setupListeners();
             }
 
             function nextSlide() {
-                sliderWrapper.animate(
-                    {'left': widthOfItem * params.slideScroll},
+                // sliderItemsContainer.children(':nth-child(-n+' + options.slideScroll + ')').appendTo(sliderItemsContainer);
+
+                sliderItemsContainer.animate(
+                    // {'left': widthOfItem * options.slideScroll},
                     moveNextCallback()
                 );
             }
 
             function moveNextCallback() {
-                sliderWrapper.children(':nth-child(-n+' + params.slideScroll + ')').appendTo(sliderWrapper);
-                sliderWrapper.css('left', 0);
+                sliderItemsContainer.children(':nth-child(-n+' + options.slideScroll + ')').appendTo(sliderItemsContainer);
+                // sliderItemsContainer.css('left',);
             }
 
             function prevSlide() {
-                sliderWrapper.animate(
-                    {'left': widthOfItem * params.slideScroll},
-                    10,
-                    0,
+                sliderItemsContainer.animate(
+                    // {'left': widthOfItem * options.slideScroll},
                     movePrevCallback()
                 );
             }
 
             function movePrevCallback() {
-                sliderWrapper.children(':nth-last-child(-n+' + params.slideScroll + ')').prependTo(sliderWrapper);
-                sliderWrapper.css('left', 0);
+                sliderItemsContainer.children(':nth-last-child(-n+' + options.slideScroll + ')').prependTo(sliderItemsContainer);
+                // sliderItemsContainer.css('right', 0);
             }
 
             let controlClick = function (e) {
@@ -66,14 +75,13 @@ $(document).ready(function () {
                 }
             };
 
-            let setupListeners = function () {
+            function setupListeners() {
                 for (const sliderControl of sliderControls) {
                     sliderControl.addEventListener('click', controlClick);
                 }
-            };
+            }
 
             init();
-            setupListeners();
         }
     }
 )(jQuery);
