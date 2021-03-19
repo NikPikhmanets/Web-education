@@ -205,13 +205,12 @@ header .intro p {
   transition: opacity 0.2s linear;
 }
 .about-us .about-media-content .slider-wrapper .about-items .container-social-icons {
-  display: grid;
-  justify-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .about-us .about-media-content .slider-wrapper .about-items .container-social-icons .social-icons {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   position: absolute;
   opacity: 0;
   transition: all 0.1s linear;
