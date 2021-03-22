@@ -386,6 +386,9 @@ header .intro p {
   opacity: 1;
   transition: opacity 0.2s linear;
 }
+.latest-works .show {
+  display: flex;
+}
 .banner-get-in-touch {
   text-align: center;
   position: relative;
