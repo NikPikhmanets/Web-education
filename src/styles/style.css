@@ -503,75 +503,83 @@ header .intro p {
   color: #555;
   padding: 100px 0;
   background-color: #f8f8f8;
+}
+.brands .brands-container {
+  position: relative;
+  justify-content: center;
   overflow: hidden;
 }
-.brands .brands-logos {
+.brands .brands-container .brands-logos {
   height: 50px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
-.brands .brands-logos .b-logo1 {
+.brands .brands-container .brands-logos .b-logo {
+  box-sizing: border-box;
+}
+.brands .brands-container .brands-logos #b-logo1 {
   width: 150px;
   background: url(../images/emblems/logo1.jpg) no-repeat center;
 }
-.brands .brands-logos .b-logo1:hover {
+.brands .brands-container .brands-logos #b-logo1:hover {
   background: url(../images/emblems/logo-1.png) no-repeat center;
 }
-.brands .brands-logos .b-logo2 {
+.brands .brands-container .brands-logos #b-logo2 {
   width: 150px;
   background: url(../images/emblems/logo2.jpg) no-repeat center;
 }
-.brands .brands-logos .b-logo2:hover {
+.brands .brands-container .brands-logos #b-logo2:hover {
   background: url(../images/emblems/logo-2.png) no-repeat center;
 }
-.brands .brands-logos .b-logo3 {
+.brands .brands-container .brands-logos #b-logo3 {
   width: 150px;
   background: url(../images/emblems/logo3.jpg) no-repeat center;
 }
-.brands .brands-logos .b-logo3:hover {
+.brands .brands-container .brands-logos #b-logo3:hover {
   background: url(../images/emblems/logo-3.png) no-repeat center;
 }
-.brands .brands-logos .b-logo4 {
+.brands .brands-container .brands-logos #b-logo4 {
   width: 150px;
   background: url(../images/emblems/logo4.jpg) no-repeat center;
 }
-.brands .brands-logos .b-logo4:hover {
+.brands .brands-container .brands-logos #b-logo4:hover {
   background: url(../images/emblems/logo-4.jpg) no-repeat center;
 }
-.brands .brands-logos .b-logo5 {
+.brands .brands-container .brands-logos #b-logo5 {
   width: 150px;
   background: url(../images/emblems/logo5.jpg) no-repeat center;
 }
-.brands .brands-logos .b-logo5:hover {
+.brands .brands-container .brands-logos #b-logo5:hover {
   background: url(../images/emblems/logo-5.jpg) no-repeat center;
 }
-.brands .b-text {
+.brands .brands-container .brands-text {
+  margin-top: 50px;
+}
+.brands .brands-container .brands-text .b-text {
   font-size: 18px;
   font-style: italic;
   padding: 40px 150px 0;
 }
-.brands .b-bottom-text {
+.brands .brands-container .brands-text .b-bottom-text {
   font-size: 20px;
 }
-.brands .indicators {
+.brands .brands-container .indicators {
   cursor: pointer;
   display: flex;
   height: 13px;
   justify-content: center;
-  padding-top: 40px;
+  margin-top: 50px;
 }
-.brands .indicators .indicator {
+.brands .brands-container .indicators .indicator {
   height: 13px;
   width: 13px;
   border-radius: 50%;
   margin: 0 5px;
-  background-color: #ddd;
+  background: #ddd;
 }
-.brands .indicators .b-active-indicator {
-  background-color: #c0301c;
-}
-.brands .indicators .invisible {
-  display: none;
+.brands .brands-container .indicators .active-indicator {
+  background: #c0301c;
+  cursor: default;
 }
 .contacts {
   max-width: 1200px;
@@ -756,6 +764,9 @@ footer p:before {
   header .intro {
     padding: 0 10px;
   }
+  .lock-scroll {
+    overflow: hidden;
+  }
   .responsive {
     position: absolute;
     display: grid;
@@ -883,13 +894,6 @@ footer p:before {
   }
   .recent-blog-posts img {
     display: none;
-  }
-  .brands .brands-logos .b-logo4,
-  .brands .brands-logos .b-logo5 {
-    display: none;
-  }
-  .brands .indicators .invisible {
-    display: flex;
   }
   .contacts .contacts-content {
     padding: 0 20px;
