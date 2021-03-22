@@ -26,7 +26,7 @@ $(document).ready(function () {
                     currentNumbIndicator,
                     indicatorsCount;
 
-                function getCountElement() {
+                function getCountElementBySizeWin() {
                     let win = $(this);
 
                     if (win.width() <= 600) {
@@ -47,8 +47,8 @@ $(document).ready(function () {
                     if (indicatorControls.length === 0) {
                         container.css('height', slideItemHeight + 50);
                     } else {
-                        slideItemWidth = widthOfContainer / getCountElement();
-                        indicatorsCount = sliderItemsCount / getCountElement();
+                        slideItemWidth = widthOfContainer / getCountElementBySizeWin();
+                        indicatorsCount = sliderItemsCount / getCountElementBySizeWin();
                         $(indicatorControls).empty();
 
                         for (let i = 0; i < indicatorsCount; i++) {

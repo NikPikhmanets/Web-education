@@ -327,6 +327,7 @@ header .intro p {
 }
 .latest-works .lw-controls .active-button {
   color: #c0301c;
+  cursor: default;
 }
 .latest-works .lw-content-row {
   display: flex;
