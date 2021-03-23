@@ -45,7 +45,7 @@ $(document).ready(function () {
                     let slideItemHeight = sliderItems[0].clientHeight;
 
                     if (indicatorControls.length === 0) {
-                        container.css('height', slideItemHeight + 50);
+                        container.css('height', slideItemHeight + 100);
                     } else {
                         slideItemWidth = widthOfContainer / getCountElementBySizeWin();
                         indicatorsCount = sliderItemsCount / getCountElementBySizeWin();
