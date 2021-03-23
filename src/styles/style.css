@@ -338,15 +338,17 @@ header .intro p {
   justify-content: center;
 }
 .latest-works .lw-content-row .lw-item {
-  display: none;
-  position: relative;
   margin: 10px;
 }
-.latest-works .lw-content-row .lw-item img {
+.latest-works .lw-content-row .lw-item .ls-item-container {
+  display: flex;
+  position: relative;
+}
+.latest-works .lw-content-row .lw-item .ls-item-container img {
   vertical-align: middle;
   width: 100%;
 }
-.latest-works .lw-content-row .lw-item .lw-cover {
+.latest-works .lw-content-row .lw-item .ls-item-container .lw-cover {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -357,20 +359,20 @@ header .intro p {
   background-color: rgba(192, 48, 28, 0.5);
   opacity: 0;
 }
-.latest-works .lw-content-row .lw-item .lw-cover .lw-cover-content {
+.latest-works .lw-content-row .lw-item .ls-item-container .lw-cover .lw-cover-content {
   display: inline;
   justify-content: center;
 }
-.latest-works .lw-content-row .lw-item .lw-cover .lw-cover-content .lw-top-text {
+.latest-works .lw-content-row .lw-item .ls-item-container .lw-cover .lw-cover-content .lw-top-text {
   font-family: 'Montserrat', sans-serif;
   font-size: 18px;
 }
-.latest-works .lw-content-row .lw-item .lw-cover .lw-cover-content .lw-middle-text {
+.latest-works .lw-content-row .lw-item .ls-item-container .lw-cover .lw-cover-content .lw-middle-text {
   margin: 10px auto 40px;
   font-family: 'Roboto-SLab', sans-serif;
   font-size: 12px;
 }
-.latest-works .lw-content-row .lw-item .lw-cover .lw-cover-content .lw-text-button {
+.latest-works .lw-content-row .lw-item .ls-item-container .lw-cover .lw-cover-content .lw-text-button {
   font-family: 'Roboto-SLab', sans-serif;
   font-size: 14px;
   text-transform: uppercase;
@@ -380,12 +382,9 @@ header .intro p {
   color: #c0301c;
   background-color: white;
 }
-.latest-works .lw-content-row .lw-item:hover .lw-cover {
+.latest-works .lw-content-row .lw-item .ls-item-container:hover .lw-cover {
   opacity: 1;
   transition: opacity 0.2s linear;
-}
-.latest-works .lw-content-row .show-item {
-  display: flex;
 }
 .banner-get-in-touch {
   text-align: center;

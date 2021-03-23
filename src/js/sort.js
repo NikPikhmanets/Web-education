@@ -8,8 +8,9 @@ $(document).ready(function () {
 });
 
 (function ($) {
-        const firstButton = 0;
-        const click = 'click';
+        const FIRST_BUTTON = 0;
+        const CLICK = 'click';
+        const ALL = 'all';
 
         $.fn.sorting = function (params) {
             let options = $.extend({
@@ -28,10 +29,10 @@ $(document).ready(function () {
                 function initButtons() {
                     for (let i = 0; i < buttons.length; i++) {
                         let btn = buttons[i];
-                        btn.addEventListener(click, buttonsClick.bind(null, i, options.category[i]))
+                        btn.addEventListener(CLICK, buttonsClick.bind(null, i, options.category[i]))
                     }
                     currentButton = buttons.first();
-                    setActiveButton(firstButton);
+                    setActiveButton(FIRST_BUTTON);
                 }
 
                 function setActiveButton(num) {
@@ -39,21 +40,27 @@ $(document).ready(function () {
                     currentButton.addClass(options.active);
                 }
 
+                function showAll() {
+                    for (let item of items) {
+                        $(item).fadeIn('slow');
+                    }
+                }
+
+                function showByCategory(c) {
+                    for (let i = items.length; i >= 0; i--) {
+                        if ($(items[i]).hasClass(c)) {
+                            $(items[i]).fadeIn('slow');
+                        } else {
+                            $(items[i]).fadeOut();
+                        }
+                    }
+                }
+
                 function sort(c) {
-                    if (c === 'all') {
-                        for (let i = 0; i < items.length; i++) {
-                            if (!$(items[i]).hasClass(c)) {
-                                $(items[i]).addClass('show-item');
-                            }
-                        }
+                    if (c === ALL) {
+                        showAll();
                     } else {
-                        for (let i = 0; i < items.length; i++) {
-                            if ($(items[i]).hasClass(c)) {
-                                $(items[i]).addClass('show-item');
-                            } else {
-                                $(items[i]).removeClass('show-item');
-                            }
-                        }
+                        showByCategory(c);
                     }
                 }
 
@@ -69,7 +76,7 @@ $(document).ready(function () {
                     sort(category);
                 }
 
-                sort('all');
+                sort(ALL);
                 initButtons();
             }
 
