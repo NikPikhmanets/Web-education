@@ -325,6 +325,9 @@ header .intro p {
   color: #c0301c;
   cursor: pointer;
 }
+.latest-works .lw-controls button:focus {
+  outline: none;
+}
 .latest-works .lw-controls .active-button {
   color: #c0301c;
   cursor: default;
@@ -334,21 +337,16 @@ header .intro p {
   flex-wrap: wrap;
   justify-content: center;
 }
-.latest-works .lw-content-row .lw-content-column {
-  flex: 30%;
-  max-width: 30%;
-  display: grid;
-}
-.latest-works .lw-content-row .lw-content-column .lw-item {
-  display: flex;
+.latest-works .lw-content-row .lw-item {
+  display: none;
   position: relative;
   margin: 10px;
 }
-.latest-works .lw-content-row .lw-content-column .lw-item img {
+.latest-works .lw-content-row .lw-item img {
   vertical-align: middle;
   width: 100%;
 }
-.latest-works .lw-content-row .lw-content-column .lw-item .lw-cover {
+.latest-works .lw-content-row .lw-item .lw-cover {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -359,20 +357,20 @@ header .intro p {
   background-color: rgba(192, 48, 28, 0.5);
   opacity: 0;
 }
-.latest-works .lw-content-row .lw-content-column .lw-item .lw-cover .lw-cover-content {
+.latest-works .lw-content-row .lw-item .lw-cover .lw-cover-content {
   display: inline;
   justify-content: center;
 }
-.latest-works .lw-content-row .lw-content-column .lw-item .lw-cover .lw-cover-content .lw-top-text {
+.latest-works .lw-content-row .lw-item .lw-cover .lw-cover-content .lw-top-text {
   font-family: 'Montserrat', sans-serif;
   font-size: 18px;
 }
-.latest-works .lw-content-row .lw-content-column .lw-item .lw-cover .lw-cover-content .lw-middle-text {
+.latest-works .lw-content-row .lw-item .lw-cover .lw-cover-content .lw-middle-text {
   margin: 10px auto 40px;
   font-family: 'Roboto-SLab', sans-serif;
   font-size: 12px;
 }
-.latest-works .lw-content-row .lw-content-column .lw-item .lw-cover .lw-cover-content .lw-text-button {
+.latest-works .lw-content-row .lw-item .lw-cover .lw-cover-content .lw-text-button {
   font-family: 'Roboto-SLab', sans-serif;
   font-size: 14px;
   text-transform: uppercase;
@@ -382,11 +380,11 @@ header .intro p {
   color: #c0301c;
   background-color: white;
 }
-.latest-works .lw-content-row .lw-content-column .lw-item:hover .lw-cover {
+.latest-works .lw-content-row .lw-item:hover .lw-cover {
   opacity: 1;
   transition: opacity 0.2s linear;
 }
-.latest-works .show {
+.latest-works .lw-content-row .show-item {
   display: flex;
 }
 .banner-get-in-touch {
@@ -811,20 +809,14 @@ footer p:before {
     flex-wrap: wrap;
     justify-content: center;
   }
-  .latest-works .lw-content-row .lw-content-column {
-    flex: 100%;
-    max-width: 100%;
-    justify-content: center;
-    display: grid;
-  }
-  .latest-works .lw-content-row .lw-content-column .lw-item .lw-cover .lw-cover-content .lw-top-text {
+  .latest-works .lw-content-row .lw-item .lw-cover .lw-cover-content .lw-top-text {
     font-size: 9px;
   }
-  .latest-works .lw-content-row .lw-content-column .lw-item .lw-cover .lw-cover-content .lw-middle-text {
+  .latest-works .lw-content-row .lw-item .lw-cover .lw-cover-content .lw-middle-text {
     margin: 5px auto 20px;
     font-size: 6px;
   }
-  .latest-works .lw-content-row .lw-content-column .lw-item .lw-cover .lw-cover-content .lw-text-button {
+  .latest-works .lw-content-row .lw-item .lw-cover .lw-cover-content .lw-text-button {
     font-size: 7px;
     padding: 7px 10px;
   }
@@ -881,18 +873,14 @@ footer p:before {
     flex-wrap: wrap;
     justify-content: center;
   }
-  .latest-works .lw-content-row .lw-content-column {
-    flex: 40%;
-    max-width: 40%;
-  }
-  .latest-works .lw-content-row .lw-content-column .lw-item .lw-cover .lw-cover-content .lw-top-text {
+  .latest-works .lw-content-row .lw-item .lw-cover .lw-cover-content .lw-top-text {
     font-size: 12px;
   }
-  .latest-works .lw-content-row .lw-content-column .lw-item .lw-cover .lw-cover-content .lw-middle-text {
+  .latest-works .lw-content-row .lw-item .lw-cover .lw-cover-content .lw-middle-text {
     margin: 8px auto 30px;
     font-size: 10px;
   }
-  .latest-works .lw-content-row .lw-content-column .lw-item .lw-cover .lw-cover-content .lw-text-button {
+  .latest-works .lw-content-row .lw-item .lw-cover .lw-cover-content .lw-text-button {
     font-size: 10px;
     padding: 10px 15px;
   }

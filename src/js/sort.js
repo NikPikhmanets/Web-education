@@ -19,7 +19,6 @@ $(document).ready(function () {
                 category: params.category
             });
 
-
             function main(t) {
                 let buttons = t.children(options.controls).children(),
                     currentNumbOfButton,
@@ -40,18 +39,23 @@ $(document).ready(function () {
                     currentButton.addClass(options.active);
                 }
 
-                // function sort(c) {
-                //     if (c === "all") {
-                //         c = "";
-                //     }
-                //     for (let i = 0; i < items.length; i++) {
-                //         $(items[i]).removeClass('show');
-                //
-                //         if ( $(items[i]).hasClass(c) > -1) {
-                //             $(items[i]).addClass('show');
-                //         }
-                //     }
-                // }
+                function sort(c) {
+                    if (c === 'all') {
+                        for (let i = 0; i < items.length; i++) {
+                            if (!$(items[i]).hasClass(c)) {
+                                $(items[i]).addClass('show-item');
+                            }
+                        }
+                    } else {
+                        for (let i = 0; i < items.length; i++) {
+                            if ($(items[i]).hasClass(c)) {
+                                $(items[i]).addClass('show-item');
+                            } else {
+                                $(items[i]).removeClass('show-item');
+                            }
+                        }
+                    }
+                }
 
                 function buttonsClick(num, category) {
                     console.log(category);
@@ -65,6 +69,7 @@ $(document).ready(function () {
                     sort(category);
                 }
 
+                sort('all');
                 initButtons();
             }
 
