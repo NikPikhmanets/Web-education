@@ -9,7 +9,6 @@ $(document).ready(function () {
 
 (function ($) {
         const FIRST_BUTTON = 0;
-        const CLICK = 'click';
         const ALL = 'all';
 
         $.fn.sorting = function (params) {
@@ -29,7 +28,7 @@ $(document).ready(function () {
                 function initButtons() {
                     for (let i = 0; i < buttons.length; i++) {
                         let btn = buttons[i];
-                        btn.addEventListener(CLICK, buttonsClick.bind(null, i, options.category[i]))
+                        btn.addEventListener('click', buttonsClick.bind(null, i, options.category[i]))
                     }
                     currentButton = buttons.first();
                     setActiveButton(FIRST_BUTTON);
@@ -47,11 +46,9 @@ $(document).ready(function () {
                 }
 
                 function showByCategory(c) {
-                    for (let i = items.length; i >= 0; i--) {
+                    for (let i = 0; i < items.length; i++) {
                         if ($(items[i]).hasClass(c)) {
                             $(items[i]).fadeIn('slow');
-                        } else {
-                            $(items[i]).fadeOut();
                         }
                     }
                 }
@@ -66,6 +63,7 @@ $(document).ready(function () {
 
                 function buttonsClick(num, category) {
                     console.log(category);
+                    $(items).hide();
 
                     if (num === currentNumbOfButton) {
                         return;
