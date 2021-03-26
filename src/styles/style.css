@@ -514,6 +514,7 @@ header .intro p {
   height: 50px;
   display: flex;
   justify-content: space-around;
+  position: absolute;
 }
 .brands .brands-container .brands-logos .b-logo {
   box-sizing: border-box;

@@ -66,30 +66,28 @@ $(document).ready(function () {
 
                 function nextSlide() {
                     containerSliderItems.animate(
-                        {'left': 0},
+                        {'left': -widthSlideItem * options.slideScroll},
                         500,
                         moveNextCallback()
                     );
                 }
 
                 function moveNextCallback() {
-                    containerSliderItems.children(':nth-last-child(-n+' + options.slideScroll + ')').prependTo(containerSliderItems);
-                    containerSliderItems.css('left', -widthSlideItem * options.slideScroll);
+                    containerSliderItems.children(':nth-child(-n+' + options.slideScroll + ')').appendTo(containerSliderItems);
+                    containerSliderItems.css('left', 0);
                 }
 
                 function prevSlide() {
                     containerSliderItems.animate(
-                        {'left': -widthSlideItem * options.slideScroll},
-                        // {'left': 0},// if countElement: 4
+                        {'left': 0},
                         500,
                         movePrevCallback()
                     );
                 }
 
                 function movePrevCallback() {
-                    containerSliderItems.children(':nth-child(-n+' + options.slideScroll + ')').appendTo(containerSliderItems);
-                    // sliderItemsContainer.css('left', widthOfItem * options.slideScroll); // if countElement: 4
-                    containerSliderItems.css('left', 0);
+                    containerSliderItems.children(':nth-last-child(-n+' + options.slideScroll + ')').prependTo(containerSliderItems);
+                    containerSliderItems.css('left', -widthSlideItem * options.slideScroll);
                 }
 
                 let controlClick = function (e) {
